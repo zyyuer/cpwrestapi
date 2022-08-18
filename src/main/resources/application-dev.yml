@@ -1,0 +1,37 @@
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.30.254:1521:tghis
+    username: tg_ny
+    password: ENC(/kRBx4qloXJqkjHMIHraQA==)
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  main:
+    allow-circular-references: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.tangue.cpw.model
+  configuration:
+    map-underscore-to-camel-case: true
+jasypt:
+  encryptor:
+    password: yuer
+logging:
+  level:
+    com.tangue.cpw.repository: debug
+  file:
+    path: D:\logs
+    name: D:\logs\boot-launch.log
+    pattern:
+      console: '%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)'
+      file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger : %msg%n'
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 10
+server:
+  port: 8080

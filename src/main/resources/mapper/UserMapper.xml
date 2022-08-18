@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tangue.cpw.repository.UserMapper">
+<select id="findByUsername" resultType="User">
+        select usercode,username,password,roles,permissions,
+               accountnonexpired,accountnonlocked,credentialsnonexpired,enabled
+        from public_user where usercode=#{username}
+    </select>
+
+</mapper>

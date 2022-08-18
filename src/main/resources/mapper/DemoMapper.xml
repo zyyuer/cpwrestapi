@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tangue.cpw.repository.DemoMapper">
+    <!--<resultMap id="DeptResultMap" type="DemoVo">
+        <result column="dept_code" jdbcType="VARCHAR" property="deptCode"/>
+        <result column="dept_name" jdbcType="VARCHAR" property="deptName"/>
+        <result column="dept_parent" jdbcType="VARCHAR" property="deptParent"/>
+        <result column="dept_grade" jdbcType="INTEGER" property="deptGrade"/>
+        <result column="leaf_flag" jdbcType="VARCHAR" property="leafFlag"/>
+        <result column="dept_type" jdbcType="VARCHAR" property="deptType"/>
+        <result column="inner_flag" jdbcType="VARCHAR" property="innerFlag"/>
+        <result column="use_flag" jdbcType="VARCHAR" property="useFlag"/>
+    </resultMap>-->
+    <select id="selectAllParent" resultType="DemoPo">
+        <![CDATA[
+        select * from code_department where dept_parent = '&'
+        ]]>
+    </select>
+
+</mapper>
