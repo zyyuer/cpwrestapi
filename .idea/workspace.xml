@@ -161,7 +161,7 @@
       <workItem from="1660530718636" duration="13607000" />
       <workItem from="1660615382696" duration="133000" />
       <workItem from="1660704715454" duration="18842000" />
-      <workItem from="1660789198342" duration="2406000" />
+      <workItem from="1660789198342" duration="2633000" />
     </task>
     <task id="LOCAL-00001" summary="springboot学习">
       <created>1660790550108</created>
@@ -177,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660791529293</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改了认证部分内容">
+      <created>1660791650324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660791650324</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,10 +220,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1660716115200" />
-    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1660791526768">
+    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1660791648831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660791526768" />
+    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660791648831" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1660790191850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -225,38 +232,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="546" y="256" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1660790612863" />
-    <state width="1322" height="234" key="GridCell.Tab.0.bottom" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.0.bottom" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
-    <state width="1322" height="234" key="GridCell.Tab.0.center" timestamp="1660791255698">
+    <state width="1322" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.0.center" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660791255698" />
-    <state width="1322" height="234" key="GridCell.Tab.0.left" timestamp="1660791255698">
+    <state width="1322" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.0.left" timestamp="1660791684729">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660791255698" />
-    <state width="1322" height="234" key="GridCell.Tab.0.right" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660791684729" />
+    <state width="1322" height="154" key="GridCell.Tab.0.right" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
-    <state width="1322" height="234" key="GridCell.Tab.1.bottom" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.1.bottom" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
-    <state width="1322" height="234" key="GridCell.Tab.1.center" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.1.center" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
-    <state width="1322" height="234" key="GridCell.Tab.1.left" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.1.left" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
-    <state width="1322" height="234" key="GridCell.Tab.1.right" timestamp="1660791255699">
+    <state width="1322" height="154" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
+    <state width="1322" height="154" key="GridCell.Tab.1.right" timestamp="1660791684730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="154" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1660791684730" />
     <state width="1322" height="248" key="GridCell.Tab.2.bottom" timestamp="1660727862523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -57,4 +57,5 @@ public class SecurityConfigurer {
         AuthenticationManager authenticationManager = authenticationConfiguration.getAuthenticationManager();
         return authenticationManager;
     }
+
 }
