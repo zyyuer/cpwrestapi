@@ -7,6 +7,8 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   mvc:
     throw-exception-if-no-handler-found: true
+    pathmatch:
+      matching-strategy: ant_path_matcher
   web:
     resources:
       add-mappings: false

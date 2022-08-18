@@ -1,13 +1,7 @@
 package com.tangue.cpw.filters;
 
-import com.tangue.cpw.exception.CustomException;
-import com.tangue.cpw.exception.CustomExceptionType;
-import com.tangue.cpw.service.impl.MyUserDetailService;
+import com.tangue.cpw.service.impl.AuthUserDetailService;
 import com.tangue.cpw.utils.JwtUtil;
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.MalformedJwtException;
-import io.jsonwebtoken.SignatureException;
-import io.jsonwebtoken.UnsupportedJwtException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,7 +19,7 @@ import java.io.IOException;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Resource
-    private MyUserDetailService userDetailService;
+    private AuthUserDetailService userDetailService;
     @Resource
     private JwtUtil jwtUtil;
 

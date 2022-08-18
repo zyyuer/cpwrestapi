@@ -1,52 +1,35 @@
 package com.tangue.cpw.controller;
 
-import com.tangue.cpw.exception.AjaxResponse;
-import com.tangue.cpw.exception.CustomException;
-import com.tangue.cpw.exception.CustomExceptionType;
-import com.tangue.cpw.model.AuthenticationRequest;
-import com.tangue.cpw.model.AuthenticationResponse;
 import com.tangue.cpw.model.DemoVo;
 import com.tangue.cpw.service.DemoService;
-import com.tangue.cpw.service.impl.MyUserDetailService;
-import com.tangue.cpw.utils.JwtUtil;
-import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetails;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
 public class DemoController {
     private DemoService departmentService;
-    @Resource
-    private AuthenticationManager authenticationManager;
-    @Resource
-    private MyUserDetailService userDetailsService;
-    @Resource
-    private JwtUtil jwtTokenUtil;
 
     public DemoController(DemoService departmentService) {
         this.departmentService = departmentService;
     }
 
+    @Operation(summary = "所有科室", operationId = "getAll", description = "得到所有科室")
     @GetMapping("/depts/findAll")
     public List<DemoVo> getAll() {
         return departmentService.getAll();
     }
 
+    @Operation(summary = "所有父科室", operationId = "getDeptParent", description = "得到所有父级科室")
     @GetMapping("/depts/findAllParents")
     public List<DemoVo> getDeptParent() {
         List<DemoVo> allParent = departmentService.getAllParent();
         return allParent;
     }
 
+    @Operation(summary = "新建科室", operationId = "insertDept", description = "新建一个科室科室")
     @PostMapping("/depts/create")
     public void insertDept(@RequestBody DemoVo demoVo) {
         departmentService.insertDept(demoVo);
@@ -68,23 +51,5 @@ public class DemoController {
         return demoVo;
     }
 
-    //认证获得token jwt
-    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(
-            @RequestBody AuthenticationRequest authenticationRequest) throws Exception {
-        try {
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(),
-                            authenticationRequest.getPassword())
-            );
-        } catch (AuthenticationException e) {
-            //throw new Exception("Incorrect username or password", e);
-            throw new CustomException(CustomExceptionType.USER_INPUT_ERROR,
-                    "认证失败，检查认证用户或密码信息是否正确");
-        }
-        final UserDetails userDetails = userDetailsService
-                .loadUserByUsername(authenticationRequest.getUsername());
-        final String jwt = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new AuthenticationResponse(jwt));
-    }
+
 }

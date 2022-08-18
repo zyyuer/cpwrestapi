@@ -1,13 +1,14 @@
 package com.tangue.cpw.config;
 
 import com.tangue.cpw.filters.JwtRequestFilter;
-import com.tangue.cpw.service.impl.MyUserDetailService;
+import com.tangue.cpw.service.impl.AuthUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,7 +20,7 @@ import javax.annotation.Resource;
 @Configuration
 public class SecurityConfigurer {
     @Resource
-    private MyUserDetailService myUserDetailService;
+    private AuthUserDetailService myUserDetailService;
     @Resource
     private JwtRequestFilter jwtRequestFilter;
     @Resource
@@ -38,7 +39,8 @@ public class SecurityConfigurer {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/authenticate").permitAll()
+                .antMatchers("/auth/authenticate").permitAll()
+                .antMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement()
@@ -57,5 +59,11 @@ public class SecurityConfigurer {
         AuthenticationManager authenticationManager = authenticationConfiguration.getAuthenticationManager();
         return authenticationManager;
     }
+
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> web.ignoring().antMatchers("/swagger-ui/**", "/v3/api-docs/**");
+    }
+
 
 }
