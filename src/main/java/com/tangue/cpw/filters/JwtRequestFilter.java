@@ -49,14 +49,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             }
         }
-        try {
-            filterChain.doFilter(request, response);
-        } catch (Exception e) {
-            // 异常捕获，发送到error controller
-            request.setAttribute("filterException", e);
-            //将异常分发到/error/exthrow控制器
-            request.getRequestDispatcher("/api/filterException").forward(request, response);
-            //throw new CustomException(CustomExceptionType.OTHER_ERROR, e.getMessage());
-        }
+        filterChain.doFilter(request, response);
     }
 }

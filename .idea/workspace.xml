@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab59fb5c-e6cb-4de0-92d2-985097f5d8c5" name="Default Changelist" comment="" />
+    <list default="true" id="ab59fb5c-e6cb-4de0-92d2-985097f5d8c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/SecurityConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/SecurityConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/DemoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/filters/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/filters/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tangue/cpw/config/SecurityConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tangue/cpw/config/SecurityConfigurer.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +75,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="2D6rwh0JPLSGtebDYm0vitJDUA4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -158,12 +165,24 @@
       <workItem from="1660530718636" duration="13607000" />
       <workItem from="1660615382696" duration="133000" />
       <workItem from="1660704715454" duration="18842000" />
-      <workItem from="1660789198342" duration="899000" />
+      <workItem from="1660789198342" duration="2143000" />
     </task>
+    <task id="LOCAL-00001" summary="springboot学习">
+      <created>1660790550108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660790550108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="springboot学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot学习" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1660531629925">
@@ -186,42 +205,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1660716115200" />
+    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1660790547470">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660790547470" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1660790191850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1660790191850" />
-    <state width="1322" height="248" key="GridCell.Tab.0.bottom" timestamp="1660727862522">
+    <state x="546" y="256" key="Github.ShareDialog" timestamp="1660790612863">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.0.center" timestamp="1660727862522">
+    <state x="546" y="256" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1660790612863" />
+    <state width="1322" height="234" key="GridCell.Tab.0.bottom" timestamp="1660791255699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.0.left" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="234" key="GridCell.Tab.0.center" timestamp="1660791255698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.0.right" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660791255698" />
+    <state width="1322" height="234" key="GridCell.Tab.0.left" timestamp="1660791255698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.1.bottom" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660791255698" />
+    <state width="1322" height="234" key="GridCell.Tab.0.right" timestamp="1660791255699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.1.center" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="234" key="GridCell.Tab.1.bottom" timestamp="1660791255699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.1.left" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="234" key="GridCell.Tab.1.center" timestamp="1660791255699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
-    <state width="1322" height="248" key="GridCell.Tab.1.right" timestamp="1660727862522">
+    <state width="1322" height="234" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="234" key="GridCell.Tab.1.left" timestamp="1660791255699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="248" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1660727862522" />
+    <state width="1322" height="234" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
+    <state width="1322" height="234" key="GridCell.Tab.1.right" timestamp="1660791255699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="234" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1660791255699" />
     <state width="1322" height="248" key="GridCell.Tab.2.bottom" timestamp="1660727862523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

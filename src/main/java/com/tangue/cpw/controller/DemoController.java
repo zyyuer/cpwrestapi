@@ -87,11 +87,4 @@ public class DemoController {
         final String jwt = jwtTokenUtil.generateToken(userDetails);
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
-
-    @GetMapping("/filterException")
-    public void rethrow(HttpServletRequest request) {
-        Exception exception = (Exception) request.getAttribute("filterException");
-        throw new CustomException(CustomExceptionType.OTHER_ERROR,
-                "认证失败，无法请求链接" + exception.getMessage());
-    }
 }
