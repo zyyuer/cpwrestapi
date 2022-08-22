@@ -19,6 +19,7 @@ mybatis-plus:
   type-aliases-package: com.tangue.cpw.model
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 jasypt:
   encryptor:
     password: yuer

@@ -22,4 +22,12 @@ public class OpenAPIConfig {
                 .pathsToMatch("/auth/**")
                 .build();
     }
+
+    @Bean
+    public GroupedOpenApi enterApi() {
+        return GroupedOpenApi.builder()
+                .group("enter-api")
+                .pathsToMatch("/clinicalPathway/**")
+                .build();
+    }
 }

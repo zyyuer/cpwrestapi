@@ -9,15 +9,18 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.lang.Nullable;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingPathVariableException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @ControllerAdvice
+@ResponseStatus(HttpStatus.BAD_REQUEST)
 @Slf4j
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -32,7 +35,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
             request.setAttribute("javax.servlet.error.exception", ex, 0);
         }
         System.out.println(ex.getMessage());
-        return new ResponseEntity(new AjaxResponse(status.value(), "请求地址无效："+ex.getMessage()), headers, status);
+        return new ResponseEntity(new AjaxResponse(status.value(), "请求失败：" + ex.getMessage()), headers, status);
     }
 
     @Override
@@ -71,6 +74,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
         return new ResponseEntity(ajaxResponse, headers, status);
     }
 
+
     //custom exception
     @ExceptionHandler(CustomException.class)
     @ResponseBody
@@ -89,4 +93,6 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
         return AjaxResponse.error(new CustomException(
                 CustomExceptionType.OTHER_ERROR));
     }
+
+
 }

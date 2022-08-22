@@ -2,8 +2,11 @@ package com.tangue.cpw.exception;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class AjaxResponse {
+    private Date timestamp;
     private boolean isok;  //请求是否处理成功
     private int code; //请求响应状态码
     private String message;  //请求结果描述信息
@@ -20,6 +23,7 @@ public class AjaxResponse {
     //请求出现异常时的响应数据封装
     public static AjaxResponse error(CustomException e) {
         AjaxResponse resultBean = new AjaxResponse();
+        resultBean.setTimestamp(new Date());
         resultBean.setIsok(false);
         resultBean.setCode(e.getCode());
         resultBean.setMessage(e.getMessage());
@@ -30,6 +34,7 @@ public class AjaxResponse {
     public static AjaxResponse error(CustomExceptionType customExceptionType,
                                      String errorMessage) {
         AjaxResponse resultBean = new AjaxResponse();
+        resultBean.setTimestamp(new Date());
         resultBean.setIsok(false);
         resultBean.setCode(customExceptionType.getCode());
         resultBean.setMessage(errorMessage);
@@ -39,6 +44,7 @@ public class AjaxResponse {
     //请求成功的响应，不带查询数据（用于删除、修改、新增接口）
     public static AjaxResponse success() {
         AjaxResponse ajaxResponse = new AjaxResponse();
+        ajaxResponse.setTimestamp(new Date());
         ajaxResponse.setIsok(true);
         ajaxResponse.setCode(200);
         ajaxResponse.setMessage("请求响应成功!");
@@ -48,6 +54,7 @@ public class AjaxResponse {
     //请求成功的响应，带有查询数据（用于数据查询接口）
     public static AjaxResponse success(Object obj) {
         AjaxResponse ajaxResponse = new AjaxResponse();
+        ajaxResponse.setTimestamp(new Date());
         ajaxResponse.setIsok(true);
         ajaxResponse.setCode(200);
         ajaxResponse.setMessage("请求响应成功!");
@@ -58,6 +65,7 @@ public class AjaxResponse {
     //请求成功的响应，带有查询数据（用于数据查询接口）
     public static AjaxResponse success(Object obj, String message) {
         AjaxResponse ajaxResponse = new AjaxResponse();
+        ajaxResponse.setTimestamp(new Date());
         ajaxResponse.setIsok(true);
         ajaxResponse.setCode(200);
         ajaxResponse.setMessage(message);
