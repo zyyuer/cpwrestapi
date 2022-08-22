@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab59fb5c-e6cb-4de0-92d2-985097f5d8c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/EnterPathController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/ApplicationExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/EnterPathVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpwrestapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cpwrestapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/OpenAPIConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/AjaxResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/AjaxResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/AjaxResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/AjaxResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.class" afterDir="false" />
-    </list>
+    <list default="true" id="ab59fb5c-e6cb-4de0-92d2-985097f5d8c5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +161,7 @@
       <workItem from="1660704715454" duration="18842000" />
       <workItem from="1660789198342" duration="14355000" />
       <workItem from="1660874723431" duration="3703000" />
-      <workItem from="1661134185029" duration="14527000" />
+      <workItem from="1661134185029" duration="14831000" />
     </task>
     <task id="LOCAL-00001" summary="springboot学习">
       <created>1660790550108</created>
@@ -226,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660806522102</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="spring validation">
+      <created>1661153817200</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661153817200</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +230,8 @@
     <MESSAGE value="修改了认证部分内容" />
     <MESSAGE value="修改了认证部分内容a" />
     <MESSAGE value="swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger" />
+    <MESSAGE value="spring validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="21" key="#Notifications" timestamp="1660791639768">
@@ -264,10 +258,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1660716115200" />
-    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1660806521084">
+    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1661153837356">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660806521084" />
+    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1661153837356" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1660790191850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
