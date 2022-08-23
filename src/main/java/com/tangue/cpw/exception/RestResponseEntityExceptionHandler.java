@@ -91,7 +91,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     public AjaxResponse exception(Exception e) {
         //TODO 将异常信息持久化处理，方便运维人员处理
         return AjaxResponse.error(new CustomException(
-                CustomExceptionType.OTHER_ERROR));
+                CustomExceptionType.OTHER_ERROR, "系统异常：" + e.getMessage()));
     }
 
 

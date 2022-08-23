@@ -1,5 +1,6 @@
 package com.tangue.cpw.service.impl;
 
+import com.tangue.cpw.model.User;
 import com.tangue.cpw.repository.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,7 +21,7 @@ public class AuthUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        com.tangue.cpw.model.User user = this.userMapper.findByUsername(userName);
+        User user = this.userMapper.findByUsername(userName);
         System.out.println(user);
         AuthUserDetails myUserDetails = new AuthUserDetails(user);
         return myUserDetails;
