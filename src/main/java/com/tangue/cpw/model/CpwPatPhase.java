@@ -1,9 +1,11 @@
 package com.tangue.cpw.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data
 public class CpwPatPhase {
+    @TableId
     private String phaseNo;
     private String regNo;
     private String cpwNo;

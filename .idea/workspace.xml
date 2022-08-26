@@ -2,39 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab59fb5c-e6cb-4de0-92d2-985097f5d8c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwCodeCpwDefine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwPatPhase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/DefOperatorRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/DefSystemInfcCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/DualPo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/IpPatientInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/IpPatientReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwCodeCpwDefineMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwPatPhaseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwRegisterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/DefOperatorRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/DefSystemInfcCodeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/DualMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/IpPatientInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/IpPatientRegMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/EnterPathService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/IpPatientInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/IpPatientRegService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/EnterPathServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/IpPatientInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/IpPatientRegServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/utils/SequenceGenerate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/utils/ValidUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpwCodeCpwDefineMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DualMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/MybatisAspectj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/AdviceCommitDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/AdviceCommitList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/AdviceReturnDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/AdviceSelectVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwCodeCpwphase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwPatDradvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/AdviceReturnMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwCodeCpwphaseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwPatDradviceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/AdviceCommitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/AdviceSelectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/CpwPatDradviceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/CpwPatPhaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/AdviceCommitServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/AdviceSelectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/CpwPatDradviceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/CpwPatPhaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/utils/ValidableList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AdviceReturnMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpwCodeCpwphaseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpwPatPhaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/EnterPathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/EnterPathController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/AuthUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/AuthUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tangue/cpw/CpwApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tangue/cpw/CpwApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tangue/cpw/exception/RestResponseEntityExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tangue/cpw/CpwApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tangue/cpw/CpwApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpwrestapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cpwrestapi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/CpwApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/CpwApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/EnterPathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/controller/CpwApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwPatPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/CpwPatPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/EnterPathVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/model/EnterPathVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwPatPhaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/repository/CpwPatPhaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/EnterPathService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/EnterPathService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/EnterPathServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tangue/cpw/service/impl/EnterPathServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DualMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DualMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tangue/cpw/CpwApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tangue/cpw/CpwApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +78,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -120,7 +123,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -136,7 +139,7 @@
       <recent name="D:\ideaproject\cpwrestapi\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CpwApplicationTests.getSequenceNo">
+  <component name="RunManager" selected="Spring Boot.CpwApplication">
     <configuration name="CpwApplicationTests.countTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cpwrestapi" />
       <extension name="coverage">
@@ -266,7 +269,10 @@
       <workItem from="1660789198342" duration="14355000" />
       <workItem from="1660874723431" duration="3703000" />
       <workItem from="1661134185029" duration="21806000" />
-      <workItem from="1661217719934" duration="25794000" />
+      <workItem from="1661217719934" duration="26164000" />
+      <workItem from="1661317601043" duration="11457000" />
+      <workItem from="1661391813302" duration="22653000" />
+      <workItem from="1661479598853" duration="19547000" />
     </task>
     <task id="LOCAL-00001" summary="springboot学习">
       <created>1660790550108</created>
@@ -331,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661153863686</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="spring validation">
+      <created>1661246845790</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661246845791</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,14 +367,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1660531629925" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1661239868143">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1661496876421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1661239868143" />
-    <state x="462" y="221" width="441" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1660711884326">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1661496876421" />
+    <state x="462" y="221" width="450" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1661504810066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="221" width="441" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1660711884326" />
+    <state x="462" y="221" width="450" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1661504810066" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1661240727677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -370,10 +383,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1661227058356" />
-    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1661153862497">
+    <state x="183" y="0" key="CommitChangelistDialog2" timestamp="1661246843195">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1661153862497" />
+    <state x="183" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1661246843195" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1660790191850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -382,70 +395,70 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="546" y="256" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1660790612863" />
-    <state width="1322" height="356" key="GridCell.Tab.0.bottom" timestamp="1661246101866">
+    <state width="1322" height="94" key="GridCell.Tab.0.bottom" timestamp="1661502926817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="356" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661246101866" />
-    <state width="1322" height="356" key="GridCell.Tab.0.center" timestamp="1661246101865">
+    <state width="1322" height="94" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661502926817" />
+    <state width="1322" height="94" key="GridCell.Tab.0.center" timestamp="1661502926817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="356" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1661246101865" />
-    <state width="1322" height="356" key="GridCell.Tab.0.left" timestamp="1661246101865">
+    <state width="1322" height="94" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1661502926817" />
+    <state width="1322" height="94" key="GridCell.Tab.0.left" timestamp="1661502926816">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="356" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1661246101865" />
-    <state width="1322" height="356" key="GridCell.Tab.0.right" timestamp="1661246101865">
+    <state width="1322" height="94" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1661502926816" />
+    <state width="1322" height="94" key="GridCell.Tab.0.right" timestamp="1661502926817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="356" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1661246101865" />
-    <state width="1322" height="140" key="GridCell.Tab.1.bottom" timestamp="1661243487201">
+    <state width="1322" height="94" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1661502926817" />
+    <state width="1322" height="94" key="GridCell.Tab.1.bottom" timestamp="1661502926818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661243487201" />
-    <state width="1322" height="140" key="GridCell.Tab.1.center" timestamp="1661243487201">
+    <state width="1322" height="94" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661502926818" />
+    <state width="1322" height="94" key="GridCell.Tab.1.center" timestamp="1661502926817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1661243487201" />
-    <state width="1322" height="140" key="GridCell.Tab.1.left" timestamp="1661243487200">
+    <state width="1322" height="94" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1661502926817" />
+    <state width="1322" height="94" key="GridCell.Tab.1.left" timestamp="1661502926817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1661243487200" />
-    <state width="1322" height="140" key="GridCell.Tab.1.right" timestamp="1661243487201">
+    <state width="1322" height="94" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1661502926817" />
+    <state width="1322" height="94" key="GridCell.Tab.1.right" timestamp="1661502926818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1661243487201" />
-    <state width="1322" height="241" key="GridCell.Tab.2.bottom" timestamp="1661233735920">
+    <state width="1322" height="94" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1661502926818" />
+    <state width="1322" height="241" key="GridCell.Tab.2.bottom" timestamp="1661247007176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661233735920" />
-    <state width="1322" height="241" key="GridCell.Tab.2.center" timestamp="1661233735919">
+    <state width="1322" height="241" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1661247007176" />
+    <state width="1322" height="241" key="GridCell.Tab.2.center" timestamp="1661247007176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1661233735919" />
-    <state width="1322" height="241" key="GridCell.Tab.2.left" timestamp="1661233735919">
+    <state width="1322" height="241" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1661247007176" />
+    <state width="1322" height="241" key="GridCell.Tab.2.left" timestamp="1661247007176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1661233735919" />
-    <state width="1322" height="241" key="GridCell.Tab.2.right" timestamp="1661233735920">
+    <state width="1322" height="241" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1661247007176" />
+    <state width="1322" height="241" key="GridCell.Tab.2.right" timestamp="1661247007176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1661233735920" />
-    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1660203785985">
+    <state width="1322" height="241" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1661247007176" />
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1661412659098">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1660203785985" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1661148772641">
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1661412659098" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1661482155680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1661148772641" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1661482155680" />
     <state x="563" y="279" key="VCS.EditChangelistDialog" timestamp="1660806575635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="563" y="279" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1660806575635" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1661153875433">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1661246852168">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1661153875433" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1661246852168" />
     <state x="138" y="99" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1661233727249">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -462,6 +475,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1661226531683" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1661405109708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1661405109708" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1660722610351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tangue.cpw.repository.AdviceReturnMapper">
+    <select id="getAdviceReturn" resultType="AdviceReturnDto">
+        select c.pid,
+               c.reg_no,
+               a.advice_groupno,
+               a.advice_code,
+               a.advice_rowno,
+               b.item_code,
+               d.item_name,
+               b.dosage,
+               b.dosage_unit_code,
+               b.small_qty,
+               b.big_qty,
+               decode(b.small_qty, 0, 2, 1) unit_flag,
+               a.freq_code,
+               a.dire_code,
+               a.advice_flag,
+               a.advice_class,
+               a.advice_type
+          from cpw_code_advice       a,
+               cpw_code_advice_entry b,
+               cpw_register          c,
+               code_item             d
+         where a.cpw_ver = b.cpw_ver
+           and a.cpw_code = b.cpw_code
+           and a.advice_code = b.advice_code
+           and a.cpw_ver = c.cpw_ver
+           and a.cpw_code = c.cpw_code
+           and b.item_code = d.item_code
+           and c.reg_no = #{regNo}
+           and c.pid = #{pid}
+           and a.PE_NO = #{peNo}
+         order by a.pe_no, a.advice_groupno, a.advice_code, a.advice_rowno
+    </select>
+
+</mapper>

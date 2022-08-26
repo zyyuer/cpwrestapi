@@ -26,7 +26,7 @@ public class OpenAPIConfig {
     @Bean
     public GroupedOpenApi enterApi() {
         return GroupedOpenApi.builder()
-                .group("enter-api")
+                .group("cpw-api")
                 .pathsToMatch("/clinicalPathway/**")
                 .build();
     }

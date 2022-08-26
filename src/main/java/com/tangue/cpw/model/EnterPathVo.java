@@ -76,6 +76,7 @@ public class EnterPathVo {
     @Schema(name = "nuOper", description = "责任护士编号")
     private String nuOper;
 
+    @NotBlank(message = "护理等级不能为空")
     @Schema(name = "nuOper", description = "护理等级")
     private String nurseCls;
 

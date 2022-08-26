@@ -8,11 +8,15 @@ import com.tangue.cpw.repository.*;
 import com.tangue.cpw.service.EnterPathService;
 import com.tangue.cpw.service.IpPatientInfoService;
 import com.tangue.cpw.service.IpPatientRegService;
+import com.tangue.cpw.utils.SequenceGenerate;
 import com.tangue.cpw.utils.ValidUtils;
 import io.jsonwebtoken.lang.Strings;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Service
@@ -25,6 +29,8 @@ public class EnterPathServiceImpl implements EnterPathService {
     private IpPatientInfoMapper ipPatientInfoMapper;
     private IpPatientInfoService ipPatientInfoService;
     private IpPatientRegService ipPatientRegService;
+    private SequenceGenerate sequenceGenerate;
+    private CpwPatPhaseMapper cpwPatPhaseMapper;
 
     public EnterPathServiceImpl(DualMapper dualMapper,
                                 CpwRegisterMapper cpwRegisterMapper,
@@ -33,7 +39,9 @@ public class EnterPathServiceImpl implements EnterPathService {
                                 CpwCodeCpwDefineMapper cpwCodeCpwDefineMapper,
                                 IpPatientInfoMapper ipPatientInfoMapper,
                                 IpPatientInfoService ipPatientInfoService,
-                                IpPatientRegService ipPatientRegService) {
+                                IpPatientRegService ipPatientRegService,
+                                SequenceGenerate sequenceGenerate,
+                                CpwPatPhaseMapper cpwPatPhaseMapper) {
         this.dualMapper = dualMapper;
         this.cpwRegisterMapper = cpwRegisterMapper;
         this.defSystemInfcCodeMapper = defSystemInfcCodeMapper;
@@ -42,6 +50,8 @@ public class EnterPathServiceImpl implements EnterPathService {
         this.ipPatientInfoMapper = ipPatientInfoMapper;
         this.ipPatientInfoService = ipPatientInfoService;
         this.ipPatientRegService = ipPatientRegService;
+        this.sequenceGenerate = sequenceGenerate;
+        this.cpwPatPhaseMapper = cpwPatPhaseMapper;
     }
 
     /**
@@ -50,7 +60,8 @@ public class EnterPathServiceImpl implements EnterPathService {
      * @param enterPathVo
      */
     @Override
-    public void enterPath(EnterPathVo enterPathVo) {
+    @Transactional
+    public String enterPath(EnterPathVo enterPathVo) {
         /**
          * 业务校验
          */
@@ -83,6 +94,10 @@ public class EnterPathServiceImpl implements EnterPathService {
 
         /**
          * 整理插入
+         * 1.ip_patient_info
+         * 2.ip_patient_reg
+         * 3.cpw_register
+         * 4.cpw_pat_phase
          */
         //1.ip_patient_info
         IpPatientInfo ipPatientInfo = new IpPatientInfo();
@@ -94,6 +109,8 @@ public class EnterPathServiceImpl implements EnterPathService {
         ipPatientInfoService.saveOrUpdate(ipPatientInfo);
         //2.ip_patient_reg
         Date sysDate = dualMapper.getSysDate().getSysDate();
+        String sysDateShort = ValidUtils.DateToStr(sysDate, "yyyy-MM-dd");
+        String sysDateLong = ValidUtils.DateToStr(sysDate, "yyyy-MM-dd HH:mm:ss");
         IpPatientReg ipPatientReg = new IpPatientReg();
         ipPatientReg.setRegNo(enterPathVo.getRegNo());
         ipPatientReg.setPid(enterPathVo.getPid());
@@ -105,12 +122,47 @@ public class EnterPathServiceImpl implements EnterPathService {
         ipPatientReg.setInDept(cpInDept);
         ipPatientReg.setInDate(enterPathVo.getInTime().substring(0, 10));
         ipPatientReg.setInTime(enterPathVo.getInTime());
-        ipPatientReg.setRegDate(ValidUtils.DateToStr(sysDate, "yyyy-MM-dd"));
-        ipPatientReg.setRegTime(ValidUtils.DateToStr(sysDate, "yyyy-MM-dd HH:mm:ss"));
+        ipPatientReg.setRegDate(sysDateShort);
+        ipPatientReg.setRegTime(sysDateLong);
         ipPatientReg.setRegOper(cpInOper);
         ipPatientReg.setChgFlag("01");
         ipPatientRegService.saveOrUpdate(ipPatientReg);
-
+        //3.cpw_register
+        CpwRegister cpwRegister = new CpwRegister();
+        cpwRegister.setRegNo(enterPathVo.getRegNo());
+        cpwRegister.setPid(enterPathVo.getPid());
+        String cpwNo = sequenceGenerate.getSequenceNo("SEQ_CPW_REGISTER");
+        cpwRegister.setCpwNo(cpwNo);
+        cpwRegister.setIcdCode(enterPathVo.getIcdCode());
+        cpwRegister.setCpwVer(cpwDefine.getCpwVer());
+        cpwRegister.setCpwCode(cpwDefine.getCpwCode());
+        cpwRegister.setDrOper(cpDrOper);
+        cpwRegister.setBedCode(enterPathVo.getBedCode());
+        cpwRegister.setNurseCls(enterPathVo.getNurseCls());
+        cpwRegister.setNuOper(cpNuOper);
+        cpwRegister.setInDept(cpInDept);
+        cpwRegister.setBegDate(sysDateShort);
+        cpwRegister.setInOper(cpInOper);
+        cpwRegister.setInDate(sysDateShort);
+        cpwRegister.setInTime(sysDateLong);
+        cpwRegister.setCpwregFlag("00");
+        cpwRegisterMapper.insert(cpwRegister);
+        //4.cpw_pat_phase
+        CpwPatPhase cpwPatPhase = new CpwPatPhase();
+        cpwPatPhase.setPhaseNo(sequenceGenerate.getSequenceNo("SEQ_CPW_PAT_PHASE"));
+        cpwPatPhase.setRegNo(enterPathVo.getRegNo());
+        cpwPatPhase.setCpwNo(cpwNo);
+        cpwPatPhase.setPeNo(1);
+        cpwPatPhase.setCpDateNo(1);
+        cpwPatPhase.setNowDay(sysDateShort);
+        cpwPatPhase.setNowNo(1);
+        cpwPatPhase.setConFlag("F");
+        cpwPatPhase.setVariaFlag("0000");
+        cpwPatPhase.setOperCode(enterPathVo.getInOper());
+        cpwPatPhase.setOperDate(sysDateShort);
+        cpwPatPhase.setOperTime(sysDateLong);
+        cpwPatPhaseMapper.insert(cpwPatPhase);
+        return cpwDefine.getCpwName();
     }
 
     /**
@@ -160,7 +212,7 @@ public class EnterPathServiceImpl implements EnterPathService {
         Long cntReg = cpwRegisterMapper.selectCount(queryWrapperReg);
         if (cntReg > 0) {
             throw new CustomException(CustomExceptionType.SYSTEM_ERROR,
-                    "患者本次入院已完成出径或者还在路径中，无法进入路径");
+                    "患者已出院出径或已在路径中，无法进入路径");
         }
         QueryWrapper<CpwRegister> queryWrapperPid = new QueryWrapper<>();
         queryWrapperPid.eq("pid", pid)

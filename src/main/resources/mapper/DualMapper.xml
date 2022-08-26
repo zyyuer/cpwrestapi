@@ -5,7 +5,7 @@
         select sysdate,dummy from dual
     </select>
 
-    <select id="getSequenceNo" resultType="java.lang.String">
+    <select id="getSequenceNo" resultType="java.lang.String" useCache="false" flushCache="true">
         select ${sequenceName}.nextval from dual
     </select>
 

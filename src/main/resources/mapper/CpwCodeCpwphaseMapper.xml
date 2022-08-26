@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tangue.cpw.repository.CpwCodeCpwphaseMapper">
+    <select id="getMaxNowNo" resultType="CpwCodeCpwphase">
+        select *
+          from cpw_code_cpwphase dd
+         where dd.CPW_VER = #{cpwVer}
+           and dd.CPW_CODE = #{cpwCode}
+           and dd.END_DAY = (select max(end_day)
+                               from cpw_code_cpwphase
+                              where cpw_ver = #{cpwVer}
+                              and cpw_code = #{cpwCode}
+                              )
+    </select>
+
+</mapper>
